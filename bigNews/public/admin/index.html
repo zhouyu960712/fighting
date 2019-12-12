@@ -16,9 +16,9 @@
 <body>
     <div class="sider">
         <a href="#" class="logo"><img src="images/logo02.png" alt="logo"></a>
-        <div class="user_info">
-            <img src="images/2.jpg" alt="person">
-            <span>欢迎&nbsp;&nbsp;李思思</span>
+        <div class="user_info" id="userInfoBox">
+            <!-- <img src="images/2.jpg" alt="person">
+            <span>欢迎&nbsp;&nbsp;李思思</span> -->
             <b>管理员</b>
         </div>
         <div class="menu">
@@ -44,7 +44,7 @@
         <div class="user_center_link">
             <a href="user.html" onclick="setMenu(3,0)" target="main_frame">个人中心</a>
             <img src="images/2.jpg" alt="person">
-            <a href="#"><i class="iconfont icon-tuichu"></i> 退出</a>
+            <a href="#" id="del"><i class="iconfont icon-tuichu"></i> 退出</a>
         </div>
     </div>
 
@@ -103,6 +103,11 @@
         }
 
     </script>
-
+    <script type="text/html" id="userInfoTpl">
+        <img src="./images/2.jpg" alt="person"><!-- {{user_pic}} 先这样，用户图片上传后再打开-->
+        <span>欢迎&nbsp;&nbsp;{{nickname}}</span>
+    </script>
+    <script src="js/template-web.js"></script>
+    <script src="js/houjs/index.js"></script>
 </body>
 </html>
